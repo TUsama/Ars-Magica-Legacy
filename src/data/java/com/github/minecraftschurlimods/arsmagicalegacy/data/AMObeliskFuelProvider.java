@@ -1,6 +1,7 @@
 package com.github.minecraftschurlimods.arsmagicalegacy.data;
 
 import com.github.minecraftschurlimods.arsmagicalegacy.api.AMTags;
+import com.github.minecraftschurlimods.arsmagicalegacy.api.ArsMagicaAPI;
 import com.github.minecraftschurlimods.arsmagicalegacy.common.block.obelisk.ObeliskFuelManager;
 import com.google.gson.Gson;
 import com.mojang.serialization.JsonOps;
@@ -24,9 +25,9 @@ class AMObeliskFuelProvider implements DataProvider {
     private final DataGenerator generator;
     private final String modId;
 
-    public AMObeliskFuelProvider(final DataGenerator generator, final String modId) {
+    public AMObeliskFuelProvider(final DataGenerator generator) {
         this.generator = generator;
-        this.modId = modId;
+        this.modId = ArsMagicaAPI.MOD_ID;
     }
 
     protected void addData() {

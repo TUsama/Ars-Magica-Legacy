@@ -29,8 +29,8 @@ import java.util.function.Consumer;
 class AMPatchouliBookProvider extends PatchouliBookProvider {
     private final LanguageProvider lang;
 
-    AMPatchouliBookProvider(DataGenerator generator, String modid, final LanguageProvider lang, boolean includeClient, boolean includeServer) {
-        super(generator, modid, includeClient, includeServer);
+    AMPatchouliBookProvider(DataGenerator generator, LanguageProvider lang, boolean includeClient, boolean includeServer) {
+        super(generator, ArsMagicaAPI.MOD_ID, includeClient, includeServer);
         this.lang = lang;
     }
 

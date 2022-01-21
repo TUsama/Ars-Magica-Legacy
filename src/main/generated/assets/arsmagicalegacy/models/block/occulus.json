@@ -1,5 +1,5 @@
 {
-  "parent": "block/block",
+  "parent": "minecraft:block/block",
   "textures": {
     "particle": "arsmagicalegacy:block/occulus_base",
     "base": "arsmagicalegacy:block/occulus_base",

@@ -94,6 +94,36 @@ class AMBlockStateProvider extends BlockStateProvider {
         flowerPotBlock(POTTED_WAKEBLOOM, WAKEBLOOM);
         torchBlock(VINTEUM_TORCH, VINTEUM_WALL_TORCH);
         spellRuneBlock(SPELL_RUNE);
+        horizontalBlock(OCCULUS.get(), models().getBuilder(OCCULUS.getId().getPath())
+                                               .parent(models().getExistingFile(new ResourceLocation("block/block")))
+                                               .texture("particle", "arsmagicalegacy:block/occulus_base")
+                                               .texture("base", "arsmagicalegacy:block/occulus_base")
+                                               .texture("hook", "arsmagicalegacy:block/occulus_hook")
+                                               .texture("eyeball", "arsmagicalegacy:block/occulus_eyeball")
+                                               .texture("pupil", "arsmagicalegacy:block/occulus_pupil")
+                                               .texture("eye", "arsmagicalegacy:block/occulus_eye")
+                                               .element().from(0, 0, 0).to(16, 1, 16).textureAll("#base").face(Direction.DOWN).cullface(Direction.DOWN).end().end()
+                                               .element().from(1.5f, 1, 1.5f).to(14.5f, 2, 14.5f).textureAll("#base").face(Direction.DOWN).cullface(Direction.DOWN).end().end()
+                                               .element().from(3, 2, 3).to(13, 3, 13).textureAll("#base").face(Direction.DOWN).cullface(Direction.DOWN).end().end()
+                                               .element().from(4.5f, 3, 4.5f).to(11.5f, 4, 11.5f).textureAll("#base").face(Direction.DOWN).cullface(Direction.DOWN).end().end()
+                                               .element().from(6, 4, 6).to(10, 8, 10).textureAll("#base").face(Direction.DOWN).cullface(Direction.DOWN).end().end()
+                                               .element().from(5, 7, 6).to(6, 9, 10).textureAll("#hook").end()
+                                               .element().from(11, 7, 10).to(10, 9, 6).textureAll("#hook").end()
+                                               .element().from(6, 7, 5).to(10, 9, 6).textureAll("#hook").end()
+                                               .element().from(10, 7, 11).to(6, 9, 10).textureAll("#hook").end()
+                                               .element().from(9, 8, 12).to(7, 10, 11).textureAll("#hook").end()
+                                               .element().from(12, 8, 9).to(11, 10, 7).textureAll("#hook").end()
+                                               .element().from(4, 8, 7).to(5, 10, 9).textureAll("#hook").end()
+                                               .element().from(7, 8, 4).to(9, 10, 5).textureAll("#hook").end()
+                                               .element().from(5, 11, 6.5f).to(11, 12, 9.5f).textureAll("#eyeball").end()
+                                               .element().from(5, 14, 6.5f).to(11, 15, 9.5f).textureAll("#eyeball").end()
+                                               .element().from(5, 12, 6.5f).to(6.5f, 14, 9.5f).textureAll("#eyeball").end()
+                                               .element().from(9.5f, 12, 6.5f).to(11, 14, 9.5f).textureAll("#eyeball").end()
+                                               .element().from(4, 11, 7.5f).to(12, 15, 8.5f).textureAll("#eyeball").end()
+                                               .element().from(5, 10, 7.5f).to(11, 16, 8.5f).textureAll("#eyeball").end()
+                                               .element().from(6.5f, 12, 8.5f).to(9.5f, 14, 9.5f).textureAll("#eyeball").end()
+                                               .element().from(6.5f, 12, 7).to(9.5f, 14, 7.5f).textureAll("#eye").end()
+                                               .element().from(7.5f, 12, 6.9f).to(8.5f, 14, 7).textureAll("#pupil").end());
     }
 
     /**

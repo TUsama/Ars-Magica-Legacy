@@ -25,11 +25,12 @@ public class AMDatagen {
         ExistingFileHelper existingFileHelper = evt.getExistingFileHelper();
         DataGenerator generator = evt.getGenerator();
         LanguageProvider lang = new AMEnglishLanguageProvider(generator);
-        generator.addProvider(new AMPatchouliBookProvider(generator, ArsMagicaAPI.MOD_ID, lang, evt.includeClient(), evt.includeServer()));
+        generator.addProvider(new AMPatchouliBookProvider(generator, lang, evt.includeClient(), evt.includeServer()));
         if (evt.includeClient()) {
             generator.addProvider(new AMBlockStateProvider(generator, existingFileHelper));
             generator.addProvider(new AMItemModelProvider(generator, existingFileHelper));
             generator.addProvider(lang);
+            generator.addProvider(new AMSoundDefinitionsProvider(generator, existingFileHelper));
         }
         if (evt.includeServer()) {
             AMSkillProvider skillProvider = new AMSkillProvider(generator);
@@ -42,7 +43,7 @@ public class AMDatagen {
             generator.addProvider(new AMOcculusTabProvider(generator));
             generator.addProvider(new AMSpellPartDataProvider(generator));
             generator.addProvider(new AMPrefabSpellProvider(generator));
-            generator.addProvider(new AMObeliskFuelProvider(generator, ArsMagicaAPI.MOD_ID));
+            generator.addProvider(new AMObeliskFuelProvider(generator));
         }
     }
 
